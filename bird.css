@@ -31,11 +31,13 @@ body {
    background-image: url("bucket.jpeg");
    background-size: cover;
    background-position: center;
+   background-color: transparent;
+   filter: grayscale(100%);
    transform: translateX(-50%);
 }
 .rain {
    position:absolute;
-   background-image: u("");
+   background-image: url("drop.jpeg");
    background-size: cover;
    background-position: center;
    height: 40px;
