@@ -36,7 +36,9 @@ function fallingRain () {
     }
     const drop = document.createElement("div");
     drop.setAttribute("class","rain");
-    let pos = Math.random()*1500;
+    // let pos = Math.random()*1500;
+    let pos = Math.random() * (container.offsetWidth - 40); // 40 accounts for raindrop width
+
     drop.style.left=`${pos}px`;
     drop.style.top=`${0}px`;
     container.appendChild(drop);
@@ -68,6 +70,16 @@ function fallingRain () {
         }
     },30);
 }
+// if (fall >= container.offsetHeight - 40) { // Only decrease hearts when raindrop falls to the bottom
+//     hearts--;
+//     missSound.play();
+//     updateHearts();
+//     if (hearts <= 0) {
+//         gameActive = false;
+//         endGame();
+//     }
+// }
+
 function startGame (){
     startScreen.style.display = "none";
     container.style.display = "flex";
